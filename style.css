@@ -1,0 +1,383 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+        object-fit: cover;
+}
+header{
+    height: 100vh;
+    background: url(img/header-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover cover;
+    background-position: center;
+}
+
+/* NavBar */
+nav{
+   height: 100px;
+    /* justify-content: space-around; */
+    width: 100%;
+}
+.logo1{
+   position: relative;
+   top: 1rem;
+   left: 2rem;
+}
+.logo2{
+    display: none;
+    height: 60px;
+    position: absolute ;
+    top:12px;
+    left:28px;
+}
+nav ul{
+    float: right;
+    line-height: 100px;
+    margin-right: 4rem;
+    transition: 1s;
+}
+nav ul li{
+    display: inline;
+    margin-right: 1rem;
+    font-size: larger;
+    font-family:"Bebas Neue", sans-serif;
+}
+nav ul li a{
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #42200b;
+}
+nav ul li a:hover{
+    color: #df1c1c;
+}
+
+/* Menu and Cancel Button */
+#menu,#cancel{
+    display: none;
+    float: right;
+    line-height: 100px;
+    font-size: 2rem;
+    margin-right: 3rem;
+    color: white;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+/*  */
+.home1{
+   
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.left-box
+{
+    
+    width: 300px;
+}
+.left-box h2
+{
+    
+    padding: 10px 20px;
+    border: 1px dashed #42200b;
+    width: 300px;
+}
+.burger-text h1{
+    margin-top: 4%;
+    font-size: 5rem;
+    text-shadow: 4px  4px  #fff;
+}
+
+.right-box img{
+    height: 400px;
+    /* max-width: 300px; */
+}
+
+
+
+
+
+
+
+/* Responsive */
+/* @media(max-width:975px){
+   .sub-hero{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+   }
+   .hero-image{
+    grid-area: 1/2/2/3;
+   }
+} */
+@media(max-width:865px){
+    nav ul{
+        margin-right: 0;
+    }
+    nav ul li{
+        margin-right: 0;
+    }
+}
+@media(max-width:720px){
+    nav{
+        background-color: #42200b;
+        
+    }
+    .logo1{
+        display: none;
+    }
+    .logo2{
+        display: block;
+    }
+    nav ul{
+        text-align: center;
+        width: 100%;
+        background-color: #42200b;
+        position: fixed;
+        top: 100px;
+        left: -100%;
+    }
+    nav ul li{
+        display: block;
+        line-height: 4rem;
+    }
+    nav ul li a{
+        color: white;
+    }
+    #menu{
+        display: block;
+    }
+    #check:checked ~ ul{
+        left: 0; 
+    }
+    #check:checked ~ label #menu{
+        display: none;
+    }
+    #check:checked ~ label #cancel{
+        display: block;
+    }
+
+    /*  */
+    .home1{
+        height: 100vh;   
+    }
+        .right-box img{
+            height: 300px;
+            width: 280px;
+        }
+    .burger-text h1{
+        /* margin-top: 2%; */
+        font-size: 3rem;
+       
+    }
+   
+}
+
+.categories-section{
+    margin: 5%;
+}
+.categories{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+   gap: 20px;
+}
+
+.item1{
+    position: relative;
+}
+.subtext{
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: #fff;
+}
+.maintext{
+    font-size: 2rem;
+    font-family: sans-serif;
+    color: #fff;
+}
+.item1 h3{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.item1 h1{
+    position: absolute;
+    top: 60px;
+    left: 30px;
+}
+.item2{
+    position: relative;
+}
+.item2txt1{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.item2txt2{
+    position: absolute;
+    top: 250px;
+    left: 30px;
+}
+.item2main2{
+    margin-top: 2rem;
+}
+
+/* BURGERS */
+.burgers{
+    margin: 5%;
+}
+.headings{
+    text-align: center;
+}
+.headings h3{
+    max-width: fit-content;
+    margin-inline: auto;
+    color: #42200b;
+    background-color: #cec001;
+    padding: 10px;
+}
+.h1heading{
+    font-family: "Alfa Slab One", serif;
+    text-shadow: 4px 4px 4px #cec001;
+    font-size: 3.5rem;
+}
+.headings p{
+    font-size: large;
+    font-weight: 500;
+}
+.burgers-list{
+    margin: 2rem 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    justify-content: space-around;
+    column-gap: 70px;
+}
+.burger-types{
+    /* width: 70%; */
+    /* border: 1px solid; */
+    text-align: center;
+    padding: 20px;
+}
+.burger-types:hover{
+    box-shadow: 15px  20px 8px 8px #ff91021a;
+    box-shadow: inset 20px 8px 8px #ff91021a;
+    cursor: pointer;
+}
+.burger-types img{
+    height: 200px;
+    filter: drop-shadow(20px 10px 10px #c5c5c5);
+}
+.burger-types h3{
+    font-size: 2rem;
+    margin-top: 20px;
+}
+.redbtn{
+    padding: 10px 25px;
+    background-color: #df1c1c;
+    border: none;
+    color: #fff;
+}
+
+/* DISCOVER SECTION */
+.discover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 5%;
+    display: grid;
+    column-gap: 3rem;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+}
+.discover-txt p{
+    text-indent: 2rem;
+    line-height: 2.5rem;
+    font-size: large;
+    margin-top: 20px;
+}
+.discover-img img{
+    height: 350px;
+    border-radius: 10px;
+}
+
+/* Reservation section */
+.reservation{
+  position: relative;
+}
+.reservation-div{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+form{
+    margin-top: 20px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+}
+form input,button{
+    padding: 10px;
+    margin: 10px;
+}
+.reservation-bg-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.reservation-bg-2{
+    position: absolute;
+    height: 450px;
+    top: 0;
+    right: 0;
+}
+
+/* FOOTER SECTION */
+footer{
+    width: 100vw;
+    margin-top: 10rem;
+    height: 400px;
+    background: url(img/footer-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer-main{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 350px;
+  flex-wrap: wrap;
+}
+.footer-left, .footer-right{
+    width: 40%;
+    font-size: 1rem;
+    color: white;
+    line-height: 1.5rem;
+    font-family: sans-serif;
+    line-height: 2rem;
+}
+.footer-left img{
+    margin-bottom: 2rem;
+}
+/* .footer-left p{
+   
+} */
+.footer-right{
+    text-align: right;
+}
+.footer-main p{
+    color: white;
+}
+footer i{
+    margin-right: 5px;
+}
+.copyright{
+    text-align: center;
+    color: white;
+}
